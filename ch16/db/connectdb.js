@@ -2,14 +2,15 @@ import mongoose from 'mongoose';
 
 
 //connect to mongodb
-const connectdb = ()=>{
-    return  mongoose.connect("mongodb://127.0.0.1:27017/schooldb")
-    .then(()=>{
-     console.log('Connection Success..')
-    })
-    .catch((error)=>{
-        console.log('Connection Error', error);
-    })
+const connectdb = async (db_url)=>{
+    try{
+      await mongoose.connect(db_url)
+         console.log('Connection Success..')
+        
+    }
+    catch(err){
+        console.log('Connection failed..',err)
+    }
 }
 export default connectdb;
 

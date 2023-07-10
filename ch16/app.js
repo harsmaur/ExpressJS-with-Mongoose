@@ -1,11 +1,12 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import  connectdb  from './db/connectdb.js';
-const port = 3000;
+const port = process.env.PORT || 3000;
+const db_url =process.env.db_url || "mongodb://127.0.0.1:27017/schooldb";
 const app = express();
 
+
 //call the connectdb
-connectdb();
+connectdb(db_url);
 
 app.listen(port,()=>{
     console.log(`Listening to port ${port}`)
