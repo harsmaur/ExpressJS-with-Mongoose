@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 
-const CreateDoc = async()=>{
+const CreateDoc = async(nm, ag, fe, hob, isact, com)=>{
 
 try{
 //defining schema
@@ -23,12 +23,19 @@ const StudentModel = mongoose.model('student', studentSchema); //the first arg i
 //Creating new document
 
 const StudentDoc = new StudentModel({
-    name: 'HARSH Maurya',
-    age: 21,
-    fees: 11300.50,
-    hobbies: ['dancing','singing', 'reading' ],
-    isActive: true,
-    comments:[{value: 'This is good mongoose'}]
+    // name: 'HARSH Maurya',
+    // age: 21,
+    // fees: 11300.50,
+    // hobbies: ['dancing','singing', 'reading' ],
+    // isActive: true,
+    // comments:[{value: 'This is good mongoose'}]
+
+    name: nm,
+    age: ag,
+    fees: fe,
+    hobbies: hob,
+    isActive: isact,
+    comments: com
 })
 
 
