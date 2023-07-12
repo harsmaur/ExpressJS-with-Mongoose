@@ -10,7 +10,7 @@ const db_url =process.env.db_url || "mongodb://127.0.0.1:27017/";
 //connect to mongodb
 connectdb(db_url);
 //cretae and save document
-CreateDoc('sumit', 21, 45400.7, ['gaming', 'dancing'], false, [{value: 'This is bad'}])
+CreateDoc('sanjana', 24, 45400.7, ['gaming', 'dancing'], false, [{value: 'This is bad'}])
 
 
 
