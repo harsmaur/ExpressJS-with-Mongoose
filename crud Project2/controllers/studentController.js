@@ -47,7 +47,7 @@ class studentController {
         try{
             // console.log(req.params.id)
             //updaating to the db
-           const result = await StudentModel.findByIdAndUpdate(req.params.id, req.body  ) 
+           const result = await StudentModel.findByIdAndUpdate(req.params.id, req.body ) 
             //redirecting to the home(index page)
            res.redirect('/student')
         }
